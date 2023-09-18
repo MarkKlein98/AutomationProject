@@ -21,3 +21,7 @@ class Actions:
         locator_type = getattr(By, locator)
         WebDriverWait(self.my_driver.driver, 10).until(EC.visibility_of_element_located((locator_type, value)))
         time.sleep(0.7)
+
+    def url_change(self):
+        WebDriverWait(self.my_driver.driver, 10).until(EC.url_changes(self))
+
