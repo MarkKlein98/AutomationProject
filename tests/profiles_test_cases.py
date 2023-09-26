@@ -33,7 +33,7 @@ class Profiles(TestCase):
 
     def test_click_export_to_CSV(self):
         self.test_click_menu_profiles()
-        Actions(self.my_driver).click_element('XPATH', export_to_csv) ######
+        Actions(self.my_driver).click_element('XPATH', export_to_csv)
 
 
     def test_CSV_file_matches_table(self):
@@ -44,9 +44,17 @@ class Profiles(TestCase):
     def test_correct_amount_of_profiles(self):
         self.test_click_menu_profiles()
         time.sleep(1)
+        self.my_driver.find_element(By.XPATH, profiles_ID).click()
+        Actions(self.my_driver).scroll_down()
         amount_of_profiles = len(self.my_driver.find_elements(By.CSS_SELECTOR, plasma_profile))
-        print(amount_of_profiles)
-        Actions(self.my_driver).click_element('XPATH', menu_devices)
+        print(f'Total amount of plasma profiles: {amount_of_profiles}')
+        Actions(self.my_driver).click_element('XPATH', menu_dashboard)
+        Actions(self.my_driver).url_change()
+        plasma_devices = self.my_driver.find_element(By.XPATH, dashboard_plasma_devices)
+        # self.assertEqual(amount_of_profiles, int(plasma_devices.text))
+
+
+
 
 
 
@@ -62,4 +70,6 @@ class Profiles(TestCase):
     def tearDown(self) -> None:
         time.sleep(1)
         self.my_driver.quit()
+
+
 

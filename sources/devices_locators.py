@@ -9,8 +9,8 @@
 
 
 # --XPATH--
-
-
+devices_table = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+devices_plasmaID = "//th[contains(text(),'PlasmaID')]"
 # --NAME--
 
 
