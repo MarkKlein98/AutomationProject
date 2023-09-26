@@ -29,6 +29,20 @@ class Active(TestCase):
         Actions(self.my_driver).url_change()
         self.assertTrue(self.my_driver.current_url == 'http://localhost/active')
 
+    def test_Export_to_CSV(self):
+        self.test_click_menu_active()
+        Actions(self.my_driver).click_element('XPATH',Active_Export_to_CSV)
+
+    def test_PlasmaID_click(self):
+        self.test_click_menu_active()
+        time.sleep(1)
+        Actions(self.my_driver).click_element('XPATH',Active_PlasmaID)
+
+    def test_Hostname_click(self):
+        self.test_click_menu_active()
+        time.sleep(1)
+        Actions(self.my_driver).click_element('XPATH',Active_Hostname)
+
 
 
     # --------------------------------------------------------------------------------------------------------
