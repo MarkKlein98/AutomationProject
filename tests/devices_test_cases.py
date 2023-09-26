@@ -59,39 +59,39 @@ class Devices(TestCase):
 
     def test_click_my_first_device(self):
         self.test_click_menu_devices()
-        Actions(self.my_driver).click_element('XPATH','//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/tbody/tr[4]/td[2]/a')
+        Actions(self.my_driver).click_element('XPATH',devices_my_first_device)
 
     def test_click_Export_to_csv(self):
         self.test_click_menu_devices()
         self.test_click_my_first_device()
-        Actions(self.my_driver).click_element('XPATH','//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/div[1]/div[3]/button')
+        Actions(self.my_driver).click_element('XPATH',devices_Export_to_csv)
 
     def test_click_APP_name(self):
         self.test_click_menu_devices()
         self.test_click_my_first_device()
-        Actions(self.my_driver).click_element('XPATH','//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[2]')
+        Actions(self.my_driver).click_element('XPATH',devices_APP_name)
 
     def test_click_select_all(self):
         self.test_click_menu_devices()
         self.test_click_my_first_device()
         time.sleep(1)
-        Actions(self.my_driver).click_element('XPATH',"//input[@id='checkAll']")
+        Actions(self.my_driver).click_element('XPATH',devices_select_all)
 
 
     def test_click_add_button(self):
         self.test_click_menu_devices()
         self.test_click_my_first_device()
-        Actions(self.my_driver).click_element('XPATH','//tbody/tr[1]/td[7]/button[1]')
+        Actions(self.my_driver).click_element('XPATH',devices_add_button)
 
     def test_click_Add_applications(self):
         self.test_click_menu_devices()
         self.test_click_my_first_device()
         self.test_click_select_all()
-        Actions(self.my_driver).click_element('XPATH',"//button[contains(text(),'Add Applications')]")
+        Actions(self.my_driver).click_element('XPATH',devices_Add_applications)
     def test_search_my_first_device(self):
         self.test_click_menu_devices()
         self.test_click_my_first_device()
-        search = self.my_driver.find_element(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/div[1]/div[1]/input')
+        search = self.my_driver.find_element(By.XPATH,devices_search_my_first_device)
         search.send_keys('WebView2 Runtime')
 
 
