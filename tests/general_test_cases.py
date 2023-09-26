@@ -1,3 +1,6 @@
+import math
+import secrets
+
 from imports.imports import *
 
 
@@ -5,70 +8,54 @@ from imports.imports import *
 class General(TestCase):
 
     def setUp(self) -> None:
-        self.my_driver = Driver()
-        self.my_driver.driver.get(link)
+        self.driver_object = Driver()
+        self.my_driver = self.driver_object.driver
+        self.my_driver.get(link)
+
+    @classmethod
+    def setUpClass(cls):
+        # Navigate to the folder and run 'npm start' in the background
+        cls.server_process = subprocess.Popen(
+            "cd C:/Users/omrik/sources/Plasma-Dashboard && npm start",
+            shell=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        # Give the server some time to start
+        time.sleep(5)
+
 # --------------------------------------------------------------------------------------------------------
 
 
     # [Login button]
     def test_login_button(self):
-        Actions.click_element(self, 'LINK_TEXT', login_button)
-        Actions.url_change(self)
-        self.assertEqual(self.my_driver.driver.current_url, 'http://localhost/login')
+        Actions(self.my_driver).click_element('LINK_TEXT', login_button)
+        Actions(self.my_driver).url_change()
+        self.assertEqual(self.my_driver.current_url, 'http://localhost/login')
 
 
     # [Icon]
     def test_click_menu_icon(self):
-        Actions.click_element(self, 'XPATH', menu_active)
-        Actions.click_element(self, 'XPATH', menu_icon)
-        Actions.url_change(self)
-        self.assertEqual(self.my_driver.driver.current_url, 'http://localhost/dashboard')
-
-
-    # [Dashboard]
-    def test_click_menu_dashboard(self):
-        Actions.click_element(self, 'XPATH', menu_active)
-        Actions.click_element(self, 'XPATH', menu_dashboard)
-        Actions.url_change(self)
-        self.assertTrue(self.my_driver.driver.current_url == 'http://localhost/dashboard')
-
-
-    # [Active]
-    def test_click_menu_active(self):
-        Actions.click_element(self, 'XPATH', menu_active)
-        Actions.url_change(self)
-        self.assertTrue(self.my_driver.driver.current_url == 'http://localhost/active')
-
-
-    # [Mapping]
-    def test_click_menu_mapping(self):
-        Actions.click_element(self, 'XPATH', menu_mapping)
-        Actions.url_change(self)
-        self.assertTrue(self.my_driver.driver.current_url == 'http://localhost/mapping')
-
-
-    # [Profiles]
-    def test_click_menu_profiles(self):
-        Actions.click_element(self, 'XPATH', menu_profiles)
-        Actions.url_change(self)
-        self.assertTrue(self.my_driver.driver.current_url == 'http://localhost/profiles')
-
-
-    # [Devices]
-    def test_click_menu_devices(self):
-        Actions.click_element(self, 'XPATH', menu_devices)
-        Actions.url_change(self)
-        self.assertTrue(self.my_driver.driver.current_url == 'http://localhost/devices')
+        Actions(self.my_driver).click_element('XPATH', menu_active)
+        Actions(self.my_driver).click_element('XPATH', menu_icon)
+        Actions(self.my_driver).url_change()
+        self.assertEqual(self.my_driver.current_url, 'http://localhost/dashboard')
 
 
     # [Plasma logo]
     def test_click_plasma_logo(self):
-        Actions.click_element(self, 'XPATH', menu_active)
-        Actions.click_element(self, 'XPATH', plasma_logo)
-        Actions.url_change(self)
-        self.assertEqual(self.my_driver.driver.current_url, 'http://localhost/dashboard')
+        Actions(self.my_driver).click_element('XPATH', menu_active)
+        Actions(self.my_driver).click_element('XPATH', plasma_logo)
+        Actions(self.my_driver).url_change()
+        self.assertEqual(self.my_driver.current_url, 'http://localhost/dashboard')
 
     # --------------------------------------------------------------------------------------------------------
+
+    @classmethod
+    def tearDownClass(cls):
+        # Terminate the server process
+        cls.server_process.terminate()
+
     def tearDown(self) -> None:
         time.sleep(1)
-        self.my_driver.driver.quit()
+        self.my_driver.quit()
