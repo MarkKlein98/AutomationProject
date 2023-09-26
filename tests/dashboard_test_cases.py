@@ -13,7 +13,7 @@ class Dashboard(TestCase):
     def setUpClass(cls):
         # Navigate to the folder and run 'npm start' in the background
         cls.server_process = subprocess.Popen(
-            "cd C:/Users/shale/sources/Plasma-Dashboard && npm start",
+            "cd C:/Users/omrik/Source/Plasma-Dashboard && npm start",
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
@@ -50,6 +50,38 @@ class Dashboard(TestCase):
     def test_partial_activation_activate(self):
         self.test_partial_activation()
         self.assertFalse()
+
+    def test_Domain_click(self):
+        self.test_partial_activation()
+        time.sleep(1)
+        Actions(self.my_driver).click_element('XPATH',dashboard_Domain_Partial)
+
+    def test_Hostname_click(self):
+        self.test_partial_activation()
+        time.sleep(1)
+        Actions(self.my_driver).click_element('XPATH',dashboard_Hostname_Partial)
+
+    def test_OS_click(self):
+        self.test_partial_activation()
+        time.sleep(1)
+        Actions(self.my_driver).click_element('XPATH',dashboard_OS_Partial)
+
+    def test_EDR_Click(self):
+        self.test_partial_activation()
+        time.sleep(1)
+        Actions(self.my_driver).click_element('XPATH',dashboard_EDR_Partial)
+
+    def test_Plasma_installation_click(self):
+        self.test_partial_activation()
+        time.sleep(1)
+        Actions(self.my_driver).click_element('XPATH',dashboard_Plasma_installation_Partial)
+
+    def test_Last_connection_click(self):
+        self.test_partial_activation()
+        time.sleep(1)
+        Actions(self.my_driver).click_element('XPATH',dashboard_Last_connection_Partial)
+
+
 
 
     # [Complete deActivation]

@@ -14,7 +14,7 @@ class Profiles(TestCase):
     def setUpClass(cls):
         # Navigate to the folder and run 'npm start' in the background
         cls.server_process = subprocess.Popen(
-            "cd C:/Users/shale/sources/Plasma-Dashboard && npm start",
+            "cd C:/Users/omrik/sources/Plasma-Dashboard && npm start",
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE

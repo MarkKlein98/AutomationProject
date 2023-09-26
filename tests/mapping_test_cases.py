@@ -13,7 +13,7 @@ class Mapping(TestCase):
     def setUpClass(cls):
         # Navigate to the folder and run 'npm start' in the background
         cls.server_process = subprocess.Popen(
-            "cd C:/Users/shale/sources/Plasma-Dashboard && npm start",
+            "cd C:/Users/omrik/sources/Plasma-Dashboard && npm start",
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
@@ -29,6 +29,37 @@ class Mapping(TestCase):
         Actions(self.my_driver).url_change()
         self.assertTrue(self.my_driver.current_url == 'http://localhost/mapping')
 
+    def test_click_Clear(self):
+        self.test_click_menu_mapping()
+        Actions(self.my_driver).click_element('XPATH',mapping_Clear)
+
+    def test_click_Map(self):
+        self.test_click_menu_mapping()
+        Actions(self.my_driver).click_element('XPATH',mapping_Map)
+
+    def test_click_Export_to_CSV(self):
+        self.test_click_menu_mapping()
+        Actions(self.my_driver).click_element('XPATH',mapping_Export_to_CSV)
+
+    def test_click_Domain(self):
+        self.test_click_menu_mapping()
+        Actions(self.my_driver).click_element('XPATH',mapping_Domain)
+
+    def test_click_Hostname(self):
+        self.test_click_menu_mapping()
+        Actions(self.my_driver).click_element('XPATH',mapping_Hostname)
+
+    def test_click_OS(self):
+        self.test_click_menu_mapping()
+        Actions(self.my_driver).click_element('XPATH',mapping_OS)
+
+    def test_click_OS_Version(self):
+        self.test_click_menu_mapping()
+        Actions(self.my_driver).click_element('XPATH',mapping_OS_Version)
+
+    def test_click_last_login(self):
+        self.test_click_menu_mapping()
+        Actions(self.my_driver).click_element('XPATH',mapping_last_login)
 
 
     # --------------------------------------------------------------------------------------------------------
