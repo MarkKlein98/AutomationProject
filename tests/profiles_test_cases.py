@@ -14,7 +14,7 @@ class Profiles(TestCase):
     def setUpClass(cls):
         # Navigate to the folder and run 'npm start' in the background
         cls.server_process = subprocess.Popen(
-            "cd C:/Users/omrik/sources/Plasma-Dashboard && npm start",
+            "cd C:/Users/shale/sources/Plasma-Dashboard && npm start",
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
@@ -50,8 +50,8 @@ class Profiles(TestCase):
         print(f'Total amount of plasma profiles: {amount_of_profiles}')
         Actions(self.my_driver).click_element('XPATH', menu_dashboard)
         Actions(self.my_driver).url_change()
-        plasma_devices = self.my_driver.find_element(By.XPATH, dashboard_plasma_devices)
-        # self.assertEqual(amount_of_profiles, int(plasma_devices.text))
+        plasma_profiles = self.my_driver.find_element(By.XPATH, dashboard_plasma_profiles)
+        # self.assertEqual(amount_of_profiles, int(plasma_profiles.text))
 
 
 
