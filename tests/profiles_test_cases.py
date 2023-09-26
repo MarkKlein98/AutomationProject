@@ -36,16 +36,11 @@ class Profiles(TestCase):
         Actions(self.my_driver).click_element('XPATH', profiles_export_to_csv)
 
 
-    def test_CSV_file_matches_table(self):
-        self.test_click_export_to_CSV()
-        ######
-
-
     def test_correct_amount_of_profiles(self):
         self.test_click_menu_profiles()
         time.sleep(1)
-        self.my_driver.find_element(By.XPATH, profiles_ID).click()
-        Actions(self.my_driver).scroll_down()
+        self.my_driver.find_element(By.XPATH, profiles_ID_category).click()
+        Actions(self.my_driver).scroll_down(4)
         amount_of_profiles = len(self.my_driver.find_elements(By.CSS_SELECTOR, profiles_plasma_profile))
         print(f'Total amount of plasma profiles: {amount_of_profiles}')
         Actions(self.my_driver).click_element('XPATH', menu_dashboard)
@@ -54,7 +49,22 @@ class Profiles(TestCase):
         # self.assertEqual(amount_of_profiles, int(plasma_profiles.text))
 
 
+    def test_click_profile_id(self):
+        self.test_click_menu_profiles()
+        Actions(self.my_driver).click_element('CSS_SELECTOR', profiles_ID)
+        Actions(self.my_driver).url_change()
+        # self.assertEqual(self.my_driver.current_url, 'http://localhost/base/profile')
 
+
+    def test_click_profile_app_name(self):
+        self.test_click_profile_id()
+        Actions(self.my_driver).click_element('XPATH', profiles_app_name)
+
+
+    def test_profile_click_export_to_CSV(self):
+        self.test_click_profile_id()
+        Actions(self.my_driver).click_element('XPATH', profiles_export_to_csv_profile)
+        time.sleep(1)
 
 
 

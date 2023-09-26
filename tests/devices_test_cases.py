@@ -97,7 +97,7 @@ class Devices(TestCase):
         self.test_click_menu_devices()
         time.sleep(1)
         self.my_driver.find_element(By.XPATH, devices_plasmaID).click()
-        Actions(self.my_driver).scroll_down()
+        Actions(self.my_driver).scroll_down(4)
         amount_of_devices = len(self.my_driver.find_elements(By.CSS_SELECTOR, profiles_plasma_profile))
         print(f'Total amount of plasma devices: {amount_of_devices}')
         Actions(self.my_driver).click_element('XPATH', menu_dashboard)

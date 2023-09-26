@@ -27,8 +27,8 @@ class Actions:
     def url_change(self):
         WebDriverWait(self.my_driver, 10).until(EC.url_changes(self))
 
-    def scroll_down(self):
-        for i in range(4):
+    def scroll_down(self, rounds):
+        for i in range(rounds):
             scroll_down = ActionChains(self.my_driver)
             scroll_down.send_keys(Keys.SPACE).perform()
             time.sleep(0.3)
