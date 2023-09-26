@@ -93,6 +93,10 @@ class Devices(TestCase):
         search = self.my_driver.find_element(By.XPATH, devices_search_my_first_device)
         search.send_keys('WebView2 Runtime')
 
+    def test_click_reset(self):
+        self.test_click_menu_devices()
+        Actions(self.my_driver).click_element('XPATH',devices_reset)
+
     def test_correct_amount_of_devices(self):
         self.test_click_menu_devices()
         time.sleep(1)
