@@ -31,7 +31,7 @@ class Actions:
         for i in range(4):
             scroll_down = ActionChains(self.my_driver)
             scroll_down.send_keys(Keys.SPACE).perform()
-            time.sleep(1)
+            time.sleep(0.3)
         time.sleep(1)
 
 

@@ -50,7 +50,7 @@ class Profiles(TestCase):
         print(f'Total amount of plasma profiles: {amount_of_profiles}')
         Actions(self.my_driver).click_element('XPATH', menu_dashboard)
         Actions(self.my_driver).url_change()
-        plasma_profiles = self.my_driver.find_element(By.XPATH, dashboard_plasma_profiles)
+        plasma_profiles = self.my_driver.find_element(By.CSS_SELECTOR, dashboard_plasma_devices)
         # self.assertEqual(amount_of_profiles, int(plasma_profiles.text))
 
 
