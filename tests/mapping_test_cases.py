@@ -72,3 +72,4 @@ class Mapping(TestCase):
     def tearDown(self) -> None:
         time.sleep(1)
         self.my_driver.quit()
+

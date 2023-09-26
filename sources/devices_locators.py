@@ -18,7 +18,7 @@ devices_EDR = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div
 devices_Plasma_installation = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[7]'
 devices_Last_Connection = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[8]'
 devices_my_first_device = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/tbody/tr[4]/td[2]/a'
-devices_Export_to_csv = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/div[1]/div[3]/button'
+devices_Export_to_csv_device = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/div[1]/div[3]/button'
 devices_APP_name = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[2]'
 devices_select_all = "//input[@id='checkAll']"
 devices_add_button = '//tbody/tr[1]/td[7]/button[1]'
