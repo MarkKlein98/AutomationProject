@@ -9,12 +9,13 @@
 
 
 # --XPATH--
-
+export_to_csv = "//button[contains(text(),'Export to CSV')]"
 
 # --NAME--
 
 
 # --CSS_SELECTOR--
+plasma_profile = '[v-for="item in tableItems"]'
 
 
 # --LINK_TEXT--
