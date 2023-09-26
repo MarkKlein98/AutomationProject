@@ -31,7 +31,17 @@ class Dashboard(TestCase):
 
     # [Complete activation]
     def test_complete_activation(self):
+        time.sleep(1)
         Actions(self.my_driver).click_element('XPATH', dashboard_complete_activation)
+
+
+    def test_complete_activation_yes(self):
+        self.test_complete_activation()
+        Actions(self.my_driver).click_element('XPATH',dashboard_complete_activation_yes)
+
+    def test_click_complete_activation_cancel(self):
+        self.test_complete_activation()
+        Actions(self.my_driver).click_element('XPATH',dashboard_complete_activation_cancel)
 
     # [Partial activation]
     def test_partial_activation(self):

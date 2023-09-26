@@ -21,7 +21,8 @@ dashboard_EDR_Partial = '/html/body/div[2]/div/div/div[2]/div/div/div/div/div/ta
 dashboard_Plasma_installation_Partial = '/html/body/div[2]/div/div/div[2]/div/div/div/div/div/table/thead/tr/th[7]'
 dashboard_Last_connection_Partial = '/html/body/div[2]/div/div/div[2]/div/div/div/div/div/table/thead/tr/th[8]'
 dashboard_plasma_devices = '[class="display-7 fw-bolder mb-2"]'
-
+dashboard_complete_activation_yes = '//button[contains(text(),"Yes, I\'m sure")]'
+dashboard_complete_activation_cancel = "//button[contains(text(),'Cancel')]"
 
 
 
