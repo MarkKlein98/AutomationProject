@@ -24,6 +24,7 @@ devices_select_all = "//input[@id='checkAll']"
 devices_add_button = '//tbody/tr[1]/td[7]/button[1]'
 devices_Add_applications = "//button[contains(text(),'Add Applications')]"
 devices_search_my_first_device = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/div[1]/div[1]/input'
+devices_plasmaID = "//th[contains(text(),'PlasmaID')]"
 
 
 
