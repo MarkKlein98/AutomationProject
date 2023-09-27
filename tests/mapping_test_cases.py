@@ -1,7 +1,6 @@
 from imports.imports import *
 
 
-
 class Mapping(TestCase):
 
     def setUp(self) -> None:
@@ -31,36 +30,35 @@ class Mapping(TestCase):
 
     def test_click_Clear(self):
         self.test_click_menu_mapping()
-        Actions(self.my_driver).click_element('XPATH',mapping_Clear)
+        Actions(self.my_driver).click_element('XPATH', mapping_Clear)
 
     def test_click_Map(self):
         self.test_click_menu_mapping()
-        Actions(self.my_driver).click_element('XPATH',mapping_Map)
+        Actions(self.my_driver).click_element('XPATH', mapping_Map)
 
     def test_click_Export_to_CSV(self):
         self.test_click_menu_mapping()
-        Actions(self.my_driver).click_element('XPATH',mapping_Export_to_CSV)
+        Actions(self.my_driver).click_element('XPATH', mapping_Export_to_CSV)
 
     def test_click_Domain(self):
         self.test_click_menu_mapping()
-        Actions(self.my_driver).click_element('XPATH',mapping_Domain)
+        Actions(self.my_driver).click_element('XPATH', mapping_Domain)
 
     def test_click_Hostname(self):
         self.test_click_menu_mapping()
-        Actions(self.my_driver).click_element('XPATH',mapping_Hostname)
+        Actions(self.my_driver).click_element('XPATH', mapping_Hostname)
 
     def test_click_OS(self):
         self.test_click_menu_mapping()
-        Actions(self.my_driver).click_element('XPATH',mapping_OS)
+        Actions(self.my_driver).click_element('XPATH', mapping_OS)
 
     def test_click_OS_Version(self):
         self.test_click_menu_mapping()
-        Actions(self.my_driver).click_element('XPATH',mapping_OS_Version)
+        Actions(self.my_driver).click_element('XPATH', mapping_OS_Version)
 
     def test_click_last_login(self):
         self.test_click_menu_mapping()
-        Actions(self.my_driver).click_element('XPATH',mapping_last_login)
-
+        Actions(self.my_driver).click_element('XPATH', mapping_last_login)
 
     # --------------------------------------------------------------------------------------------------------
 
@@ -72,4 +70,3 @@ class Mapping(TestCase):
     def tearDown(self) -> None:
         time.sleep(1)
         self.my_driver.quit()
-

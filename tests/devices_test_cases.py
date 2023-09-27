@@ -95,7 +95,7 @@ class Devices(TestCase):
 
     def test_click_reset(self):
         self.test_click_menu_devices()
-        Actions(self.my_driver).click_element('XPATH',devices_reset)
+        Actions(self.my_driver).click_element('XPATH', devices_reset)
 
     def test_correct_amount_of_devices(self):
         self.test_click_menu_devices()

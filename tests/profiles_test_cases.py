@@ -66,10 +66,6 @@ class Profiles(TestCase):
         Actions(self.my_driver).click_element('XPATH', profiles_export_to_csv_profile)
         time.sleep(1)
 
-
-
-
-
     # --------------------------------------------------------------------------------------------------------
 
     @classmethod
