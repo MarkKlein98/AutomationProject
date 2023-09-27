@@ -1,4 +1,5 @@
 import time
+from selenium.webdriver.support import expected_conditions as EC
 
 from imports.imports import *
 
@@ -80,43 +81,49 @@ class Dashboard(TestCase):
         self.test_partial_activation()
         time.sleep(1)
         Actions(self.my_driver).click_element('XPATH', dashboard_Domain_Partial)
-
-        ###
+        #
 
 
     def test_Hostname_click(self):
         self.test_partial_activation()
         time.sleep(1)
         Actions(self.my_driver).click_element('XPATH', dashboard_Hostname_Partial)
+        #
 
 
     def test_OS_click(self):
         self.test_partial_activation()
         time.sleep(1)
         Actions(self.my_driver).click_element('XPATH', dashboard_OS_Partial)
+        #
 
 
     def test_EDR_Click(self):
         self.test_partial_activation()
         time.sleep(1)
         Actions(self.my_driver).click_element('XPATH', dashboard_EDR_Partial)
+        #
 
 
     def test_Plasma_installation_click(self):
         self.test_partial_activation()
         time.sleep(1)
         Actions(self.my_driver).click_element('XPATH', dashboard_Plasma_installation_Partial)
+        #
 
 
     def test_Last_connection_click(self):
         self.test_partial_activation()
         time.sleep(1)
         Actions(self.my_driver).click_element('XPATH', dashboard_Last_connection_Partial)
+        #
 
 
     # [Complete deActivation]
     def test_complete_deActivation(self):
         Actions(self.my_driver).click_element('XPATH', dashboard_complete_deActivation)
+        cancel = WebDriverWait(self.my_driver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR, dashboard_complete_deActivation_cancel)))
+        self.assertTrue(cancel)
 
     # --------------------------------------------------------------------------------------------------------
 
