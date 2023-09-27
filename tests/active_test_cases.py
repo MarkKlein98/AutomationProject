@@ -47,7 +47,7 @@ class Active(TestCase):
     def test_Hostname_click(self):
         self.test_click_menu_active()
         time.sleep(1)
-        click_Actions(self.my_driver).click_element('XPATH', Active_Hostname)
+        Actions(self.my_driver).click_element('XPATH', Active_Hostname)
         #
 
     # --------------------------------------------------------------------------------------------------------

@@ -16,7 +16,7 @@ devices_Os = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/
 devices_EDR = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[6]'
 devices_Plasma_installation = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[7]'
 devices_Last_Connection = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[8]'
-devices_my_first_device = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/tbody/tr[4]/td[2]/a'
+devices_my_first_device = '87C8E082-4F5B-47CD-B4AF-70370C363A42'
 devices_Export_to_csv_device = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/div[1]/div[3]/button'
 devices_APP_name = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[2]'
 devices_select_all = "//input[@id='checkAll']"

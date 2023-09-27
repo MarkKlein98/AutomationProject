@@ -20,9 +20,10 @@ dashboard_OS_Partial = '/html/body/div[2]/div/div/div[2]/div/div/div/div/div/tab
 dashboard_EDR_Partial = '/html/body/div[2]/div/div/div[2]/div/div/div/div/div/table/thead/tr/th[6]'
 dashboard_Plasma_installation_Partial = '/html/body/div[2]/div/div/div[2]/div/div/div/div/div/table/thead/tr/th[7]'
 dashboard_Last_connection_Partial = '/html/body/div[2]/div/div/div[2]/div/div/div/div/div/table/thead/tr/th[8]'
-dashboard_plasma_devices = '[class="display-7 fw-bolder mb-2"]'
+dashboard_plasma_devices = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div[1]/div[2]/div/div/p'
 dashboard_complete_activation_yes = '//button[contains(text(),"Yes, I\'m sure")]'
 dashboard_complete_activation_cancel = "//button[contains(text(),'Cancel')]"
+dashboard_complete_deActivation_cancel = '[class="btn btn-secondary text-black fw-bolder"]'
 dashboard_partial_activation_checkbox = '[type="checkbox"]'
 dashboard_partial_activation_activate = '[class="btn btn-primary bg-warning text-black fw-bolder border-0 disabled"]'
 

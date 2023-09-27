@@ -28,6 +28,7 @@ class Profiles(TestCase):
     def test_click_menu_profiles(self):
         Actions(self.my_driver).click_element('XPATH', menu_profiles)
         Actions(self.my_driver).url_change()
+        #
         self.assertTrue(self.my_driver.current_url == 'http://localhost/profiles')
 
 
@@ -45,15 +46,17 @@ class Profiles(TestCase):
         print(f'Total amount of plasma profiles: {amount_of_profiles}')
         Actions(self.my_driver).click_element('XPATH', menu_dashboard)
         Actions(self.my_driver).url_change()
-        plasma_profiles = self.my_driver.find_element(By.CSS_SELECTOR, dashboard_plasma_devices)
-        # self.assertEqual(amount_of_profiles, int(plasma_profiles.text))
+        plasma_profiles = self.my_driver.find_element(By.XPATH, dashboard_plasma_devices)
+        #
+        self.assertEqual(str(amount_of_profiles), plasma_profiles.text)
 
 
     def test_click_profile_id(self):
         self.test_click_menu_profiles()
         Actions(self.my_driver).click_element('CSS_SELECTOR', profiles_ID)
         Actions(self.my_driver).url_change()
-        # self.assertEqual(self.my_driver.current_url, 'http://localhost/base/profile')
+        #
+        self.assertEqual(self.my_driver.current_url, 'http://localhost/base/profile')
 
 
     def test_click_profile_app_name(self):
