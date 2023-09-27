@@ -20,6 +20,7 @@ profiles_export_to_csv_profile = "//button[contains(text(),'Export to CSV')]"
 # --CSS_SELECTOR--
 profiles_plasma_profile = '[v-for="item in tableItems"]'
 profiles_ID = '[href="/base/profile"]'
+asd = '[class="btn btn-light"]'
 
 # --LINK_TEXT--
 

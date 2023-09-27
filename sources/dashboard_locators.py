@@ -23,6 +23,8 @@ dashboard_Last_connection_Partial = '/html/body/div[2]/div/div/div[2]/div/div/di
 dashboard_plasma_devices = '[class="display-7 fw-bolder mb-2"]'
 dashboard_complete_activation_yes = '//button[contains(text(),"Yes, I\'m sure")]'
 dashboard_complete_activation_cancel = "//button[contains(text(),'Cancel')]"
+dashboard_partial_activation_checkbox = '[type="checkbox"]'
+dashboard_partial_activation_activate = '[class="btn btn-primary bg-warning text-black fw-bolder border-0 disabled"]'
 
 
 

@@ -9,7 +9,6 @@
 
 
 # --XPATH--
-
 devices_Export_to_csv = "//button[contains(text(),'Export to CSV')]"
 devices_Domain = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[3]'
 devices_Hostname = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/table/thead/tr/th[4]'
@@ -26,9 +25,6 @@ devices_Add_applications = "//button[contains(text(),'Add Applications')]"
 devices_search_my_first_device = '//*[@id="root"]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/div[1]/div[1]/input'
 devices_plasmaID = "//th[contains(text(),'PlasmaID')]"
 devices_reset = '//tbody/tr[3]/td[10]/button[1]'
-
-
-
 
 # --NAME--
 
